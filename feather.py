@@ -16,8 +16,9 @@ src = cv2.imread(
 #     cv2.IMREAD_UNCHANGED
 # )
 
+dst = cv2.imread("blending-images/main_images/office.png")
 # dst = cv2.imread("blending-images/main_images/b99_2.png")
-dst = cv2.imread("blending-images/main_images/b99.png")
+# dst = cv2.imread("blending-images/main_images/b99.png")
 
 
 if src is None or dst is None:
@@ -169,10 +170,10 @@ blended = np.clip(blended, 0, 255).astype(np.uint8)
 # SAVE RESULTS
 # ============================================================
 
-cv2.imwrite("blending-images/result_images/warped_logo_feather_b99_pepsi.png", warped_src)
-cv2.imwrite("blending-images/result_images/warped_mask_feather_b99_pepsi.png", warped_mask)
-cv2.imwrite("blending-images/result_images/soft_mask_feather_b99_pepsi.png", soft_mask)
-cv2.imwrite("blending-images/result_images/feather_blended_b99_pepsi.png", blended)
+cv2.imwrite("blending-images/result_images/warped_logo_feather_office_pepsi.png", warped_src)
+cv2.imwrite("blending-images/result_images/warped_mask_feather_office_pepsi.png", warped_mask)
+cv2.imwrite("blending-images/result_images/soft_mask_feather_office_pepsi.png", soft_mask)
+cv2.imwrite("blending-images/result_images/feather_blended_office_pepsi.png", blended)
 
 print("Done.")
 
