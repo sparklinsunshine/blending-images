@@ -1,8 +1,8 @@
 import cv2 as cv
 import numpy as np,sys
 
-A = cv.imread('b99.png')
-B = cv.imread('office.png')
+A = cv.imread('blending-images/main_images/b99.png')
+B = cv.imread('blending-images/main_images/office.png')
 assert A is not None, "file could not be read, check with os.path.exists()"
 assert B is not None, "file could not be read, check with os.path.exists()"
 
@@ -53,5 +53,5 @@ for i in range(1,6):
 # image with direct connecting each half
 real = np.hstack((A[:,:cols//2],B[:,cols//2:]))
 
-cv.imwrite('Pyramid_blending2.jpg',ls_)
-cv.imwrite('Direct_blending.jpg',real)
+cv.imwrite('blending-images/result_images/Pyramid_blending2.jpg',ls_)
+cv.imwrite('blending-images/result_images/Direct_blending.jpg',real)

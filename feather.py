@@ -7,11 +7,11 @@ import numpy as np
 # ============================================================
 
 src = cv2.imread(
-    "lego.png",
+    "blending-images/main_images/lego.png",
     cv2.IMREAD_UNCHANGED
 )
 
-dst = cv2.imread("b99.png")
+dst = cv2.imread("blending-images/main_images/b99.png")
 
 if src is None or dst is None:
     raise ValueError("Could not load images")
@@ -162,10 +162,10 @@ blended = np.clip(blended, 0, 255).astype(np.uint8)
 # SAVE RESULTS
 # ============================================================
 
-cv2.imwrite("warped_logo.png", warped_src)
-cv2.imwrite("warped_mask.png", warped_mask)
-cv2.imwrite("soft_mask.png", soft_mask)
-cv2.imwrite("feather_blended.png", blended)
+cv2.imwrite("blending-images/result_images/warped_logo_feather.png", warped_src)
+cv2.imwrite("blending-images/result_images/warped_mask_feather.png", warped_mask)
+cv2.imwrite("blending-images/result_images/soft_mask_feather.png", soft_mask)
+cv2.imwrite("blending-images/result_images/feather_blended.png", blended)
 
 print("Done.")
 
